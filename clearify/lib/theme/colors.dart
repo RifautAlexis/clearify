@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomColors {
-  static const MaterialColor primariSwatch = MaterialColor(0xFF1EA276, colorCodes);
+  static final Color primaryColor = colorCodes[900];
+  static const MaterialColor primarySwatch = MaterialColor(0xFF1EA276, colorCodes);
   static const Color text = Color.fromRGBO(6, 33, 51, 0.6);
   static const Color disabledText = Color.fromRGBO(6, 33, 51, 0.3);
+  static const Color backgroundColorOutlinedButton = Color.fromRGBO(6, 33, 51, 0.15);
 
   static const Map<int, Color> colorCodes = {
     50: Color.fromRGBO(30, 162, 118, .1),

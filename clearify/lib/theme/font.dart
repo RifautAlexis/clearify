@@ -1,3 +1,3 @@
 class CustomFont {
-  static const fontFamily = 'Poppins';
+  // static final fontFamily = GoogleFonts.getFont('Popins');
 }

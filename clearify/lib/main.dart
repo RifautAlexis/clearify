@@ -6,7 +6,7 @@ import 'package:clearify/theme/theme.dart';
 void main() {
   runApp(
     GetMaterialApp(
-      initialRoute: '/login',
+      initialRoute: '/',
       getPages: routes,
       theme: CustomTheme.lightTheme,
     ),
