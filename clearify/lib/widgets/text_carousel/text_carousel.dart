@@ -24,10 +24,10 @@ class TextCarousel extends GetView<TextCarouselController> {
               controller: controller.pageController,
               children: List.generate(
                 texts.length,
-                (_) => Container(
+                (int index) => Container(
                   margin: EdgeInsets.fromLTRB(10.0, 0.0, 50.0, 0.0),
                   child: StyledText(
-                    text: texts[0],
+                    text: texts[index],
                     style: Get.textTheme.heading1,
                     tags: styleTags,
                   ),

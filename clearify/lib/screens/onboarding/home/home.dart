@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     const slogans = [
       "Share your company's <primaryColor>financial data</primaryColor> with your team.",
-      'Be easily <primaryColor>transparent</primaryColor> for your all team.',
+      'Be easily <primaryColor>transparent</primaryColor> for your team.',
       '<primaryColor>Fight discrimination</primaryColor> thanks to Clearify !',
     ];
     final styleTags = {
