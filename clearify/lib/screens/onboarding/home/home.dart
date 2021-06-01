@@ -1,3 +1,4 @@
+import 'package:clearify/screens/onboarding/home/home_controller.dart';
 import 'package:clearify/theme/colors.dart';
 import 'package:clearify/theme/theme.dart';
 import 'package:clearify/widgets/backbone/backbone.dart';
@@ -8,7 +9,7 @@ import 'package:get/get.dart';
 import 'package:sign_button/sign_button.dart';
 import 'package:styled_text/styled_text.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends GetView<HomeController> {
   const HomeScreen() : super();
 
   @override
@@ -40,9 +41,7 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(height: 15.0),
                     SignInButton(
                       buttonType: ButtonType.google,
-                      onPressed: () {
-                        debugPrint('Login pressed');
-                      },
+                      onPressed: () => controller.login(),
                     ),
                     SizedBox(height: 30.0),
                   ],
