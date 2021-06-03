@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomColors {
-  static final Color primaryColor = colorCodes[900];
+  static final Color primaryColor = colorCodes[900]!;
   static const MaterialColor primarySwatch = MaterialColor(0xFF1EA276, colorCodes);
   static const Color text = Color.fromRGBO(6, 33, 51, 0.6);
   static const Color disabledText = Color.fromRGBO(6, 33, 51, 0.3);
