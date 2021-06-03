@@ -10,7 +10,7 @@ class TextCarousel extends GetView<TextCarouselController> {
   final List<String> texts;
   final Map<String, StyledTextTagBase> styleTags;
 
-  const TextCarousel({@required this.texts, @required this.styleTags})
+  const TextCarousel({required this.texts, required this.styleTags})
       : super();
 
   @override

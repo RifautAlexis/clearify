@@ -7,7 +7,7 @@ import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:clearify/theme/theme.dart';
 
 class LoginLoadingScreen extends GetView<LoginLoadingController> {
-  const LoginLoadingScreen({Key key}) : super(key: key);
+  const LoginLoadingScreen() : super();
 
   @override
   Widget build(BuildContext context) {
