@@ -79,10 +79,18 @@ class CompleteInformationScreen extends GetView<CompleteInformationController> {
               SizedBox(height: 25.0),
               Align(
                 alignment: Alignment.center,
-                child: ReactiveFormConsumer(
-                  builder: (context, form, child) => ElevatedButton(
-                    onPressed: form.valid ? controller.submit : null,
-                    child: Text('Sign up'),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: ReactiveFormConsumer(
+                    builder: (context, form, child) => ElevatedButton(
+                      onPressed: form.valid ? controller.submit : null,
+                      style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
+                      ),
+                      child: Text('Sign up'),
+                    ),
                   ),
                 ),
               ),
