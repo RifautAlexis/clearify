@@ -1,4 +1,4 @@
-import 'package:clearify/screens/onboarding/home/home_controller.dart';
+import 'package:clearify/screens/onboarding/login/login_controller.dart';
 import 'package:clearify/theme/colors.dart';
 import 'package:clearify/theme/theme.dart';
 import 'package:clearify/widgets/backbone/backbone.dart';
@@ -9,8 +9,8 @@ import 'package:get/get.dart';
 import 'package:sign_button/sign_button.dart';
 import 'package:styled_text/styled_text.dart';
 
-class HomeScreen extends GetView<HomeController> {
-  const HomeScreen() : super();
+class LoginScreen extends GetView<LoginController> {
+  const LoginScreen() : super();
 
   @override
   Widget build(BuildContext context) {
