@@ -1,6 +1,6 @@
 import 'package:clearify/theme/colors.dart';
+import 'package:clearify/theme/custom_text_style.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CustomTheme {
   static ThemeData get lightTheme {
@@ -8,7 +8,26 @@ class CustomTheme {
       brightness: Brightness.light,
       primarySwatch: CustomColors.primarySwatch,
       outlinedButtonTheme: OutlinedButtonThemeData(
-        style: ButtonStyle(backgroundColor: MaterialStateProperty.all<Color>(CustomColors.backgroundColorOutlinedButton)),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(
+              CustomColors.backgroundColorOutlinedButton),
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        labelStyle: CustomTextStyle.label,
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: CustomColors.primaryColor),
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.resolveWith((states) {
+            if (states.contains(MaterialState.disabled)) {
+              return Colors.red;
+            }
+            return Colors.blue;
+          }),
+        ),
       ),
     );
   }
@@ -16,90 +35,34 @@ class CustomTheme {
 
 extension CustomTextStyles on TextTheme {
   TextStyle get heading1 {
-    return GoogleFonts.poppins(
-      textStyle: TextStyle(
-        fontWeight: FontWeight.w700,
-        fontStyle: FontStyle.normal,
-        fontSize: 24.0,
-        color: Colors.black,
-      ),
-    );
+    return CustomTextStyle.heading1;
   }
 
   TextStyle get heading2 {
-    return GoogleFonts.poppins(
-      textStyle: TextStyle(
-        fontWeight: FontWeight.w700,
-        fontStyle: FontStyle.normal,
-        fontSize: 20.0,
-        color: Colors.black,
-      ),
-    );
+    return CustomTextStyle.heading2;
   }
 
   TextStyle get heading3 {
-    return GoogleFonts.poppins(
-      textStyle: TextStyle(
-        fontWeight: FontWeight.w700,
-        fontStyle: FontStyle.normal,
-        fontSize: 18.0,
-        color: Colors.black,
-      ),
-    );
+    return CustomTextStyle.heading3;
   }
 
   TextStyle get heading4 {
-    return GoogleFonts.poppins(
-      textStyle: TextStyle(
-        fontWeight: FontWeight.w700,
-        fontStyle: FontStyle.normal,
-        fontSize: 16.0,
-        color: Colors.black,
-      ),
-    );
+    return CustomTextStyle.heading4;
   }
 
   TextStyle get heading5 {
-    return GoogleFonts.poppins(
-      textStyle: TextStyle(
-        fontWeight: FontWeight.w400,
-        fontStyle: FontStyle.normal,
-        fontSize: 16.0,
-        color: Colors.black,
-      ),
-    );
+    return CustomTextStyle.heading5;
   }
 
   TextStyle get text {
-    return GoogleFonts.poppins(
-      textStyle: TextStyle(
-        fontWeight: FontWeight.w400,
-        fontStyle: FontStyle.normal,
-        fontSize: 18.0,
-        color: CustomColors.text,
-      ),
-    );
+    return CustomTextStyle.text;
   }
 
   TextStyle get smallText {
-    return GoogleFonts.poppins(
-      textStyle: TextStyle(
-        fontWeight: FontWeight.w400,
-        fontStyle: FontStyle.normal,
-        fontSize: 12.0,
-        color: CustomColors.text,
-      ),
-    );
+    return CustomTextStyle.smallText;
   }
 
   TextStyle get label {
-    return GoogleFonts.poppins(
-      textStyle: TextStyle(
-        fontWeight: FontWeight.w700,
-        fontStyle: FontStyle.normal,
-        fontSize: 12.0,
-        color: Colors.black,
-      ),
-    );
+    return CustomTextStyle.label;
   }
 }
