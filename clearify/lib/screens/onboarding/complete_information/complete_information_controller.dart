@@ -18,6 +18,7 @@ class CompleteInformationController extends GetxController {
       debugPrint(form.control('firstName').value);
       debugPrint(form.control('lastName').value);
       debugPrint(form.control('department').value.toString());
+      return;
     }
     debugPrint('Not valid');
   }

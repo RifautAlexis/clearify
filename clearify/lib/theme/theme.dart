@@ -23,9 +23,9 @@ class CustomTheme {
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.disabled)) {
-              return Colors.red;
+              return CustomColors.disableColor;
             }
-            return Colors.blue;
+            return CustomColors.primaryColor;
           }),
         ),
       ),
