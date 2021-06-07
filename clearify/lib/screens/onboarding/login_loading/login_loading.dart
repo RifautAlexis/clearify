@@ -1,13 +1,10 @@
-import 'package:clearify/screens/onboarding/login_loading/login_loading_controller.dart';
 import 'package:clearify/widgets/backbone/backbone.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:clearify/theme/theme.dart';
 
-class LoginLoadingScreen extends GetView<LoginLoadingController> {
-  const LoginLoadingScreen() : super();
+class LoginLoadingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

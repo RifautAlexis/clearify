@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 class LoginLoadingController extends GetxController {
   @override
   void onReady() {
-    Timer(Duration(seconds: 5), () => Get.toNamed('/complete-information'));
+    Timer(Duration(seconds: 5), () => Get.offAllNamed('/complete-information'));
     super.onReady();
   }
 }

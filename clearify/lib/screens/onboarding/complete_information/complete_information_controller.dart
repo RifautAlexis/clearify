@@ -1,5 +1,4 @@
 import 'package:clearify/data/role.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:reactive_forms/reactive_forms.dart';
 
@@ -14,12 +13,11 @@ class CompleteInformationController extends GetxController {
 
   void submit() {
     if (form.valid) {
-      debugPrint('Is valid and pressed');
-      debugPrint(form.control('firstName').value);
-      debugPrint(form.control('lastName').value);
-      debugPrint(form.control('department').value.toString());
+      // debugPrint(form.control('firstName').value);
+      // debugPrint(form.control('lastName').value);
+      // debugPrint(form.control('department').value.toString());
+      Get.offAllNamed('/home');
       return;
     }
-    debugPrint('Not valid');
   }
 }

@@ -10,11 +10,14 @@ class TextCarouselController extends GetxController {
     super.onInit();
 
     Timer.periodic(Duration(seconds: 5), (Timer timer) {
-      if (pageController.offset == pageController.position.maxScrollExtent) {
-        pageController.animateToPage(0, duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
-      } else {
-        pageController.nextPage(
-            duration: Duration(milliseconds: 500), curve: Curves.easeIn);
+      if (pageController.hasClients) {
+        if (pageController.offset == pageController.position.maxScrollExtent) {
+          pageController.animateToPage(0,
+              duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
+        } else {
+          pageController.nextPage(
+              duration: Duration(milliseconds: 500), curve: Curves.easeIn);
+        }
       }
     });
   }
