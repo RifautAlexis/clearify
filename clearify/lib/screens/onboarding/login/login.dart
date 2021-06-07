@@ -10,7 +10,6 @@ import 'package:sign_button/sign_button.dart';
 import 'package:styled_text/styled_text.dart';
 
 class LoginScreen extends GetView<LoginController> {
-  const LoginScreen() : super();
 
   @override
   Widget build(BuildContext context) {
@@ -33,20 +32,21 @@ class LoginScreen extends GetView<LoginController> {
               child: Container(
                 height: 235.0,
                 child: Column(
-                  children: [
-                    TextCarousel(
-                      texts: slogans,
-                      styleTags: styleTags,
-                    ),
-                    SizedBox(height: 15.0),
-                    SignInButton(
-                      buttonType: ButtonType.google,
-                      onPressed: () => controller.login(),
-                    ),
-                    SizedBox(height: 30.0),
-                  ],
+                    children: [
+                      TextCarousel(
+                        texts: slogans,
+                        styleTags: styleTags,
+                      ),
+                      SizedBox(height: 15.0),
+                      SignInButton(
+                        buttonType: ButtonType.google,
+                        onPressed: () => controller.login(),
+                      ),
+                      SizedBox(height: 30.0),
+                    ],
+                  ),
                 ),
-              )),
+              ),
           Positioned(
             top: 25.0,
             left: 25.0,
